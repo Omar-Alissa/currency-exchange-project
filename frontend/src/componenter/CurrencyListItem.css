@@ -1,0 +1,15 @@
+.currency-list-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #eeebeb;
+}
+
+.currency-code {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.currency-name {
+  color: #ccc;
+  font-size: 16px;
+}

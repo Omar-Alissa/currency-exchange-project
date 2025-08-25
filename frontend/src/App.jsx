@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import './App.css'
+import CurrencyFilterPage from './pages/CurrencyFilterPage.jsx'
 
 function App() {
   return (
     <>
-      <h1>hello</h1>
+      <CurrencyFilterPage />
     </>
   )
 }
