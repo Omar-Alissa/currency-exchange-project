@@ -1,11 +1,16 @@
-import { useState } from 'react'
-import './Mainpage.css'
+
+import './Mainpage.css';
+import { Link } from 'react-router-dom';
 
 function Mainpage() {
   return (
     <>
       <header className="app-header">
         <div className="app-header__title">valuta converterare</div>
+        <nav style={{ position: 'absolute', right: 20, top: 20 }}>
+          <Link to="/filter" style={{ marginRight: '12px' }}>Filter Page</Link>
+          <Link to="/">Home</Link>
+        </nav>
       </header>
       <div className="currency-bar">
         <span className="currency-bar__code">USD</span>
