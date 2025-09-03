@@ -17,11 +17,17 @@ const currencies = [
   { code: 'BBD', name: 'Barbadisk Dollar' },
 ];
 
+import { Link } from 'react-router-dom';
+
 function CurrencyFilterPage() {
   return (
     <div className="currency-filter-container">
-      <div className="currency-filter-header">
+      <div className="currency-filter-header" style={{ position: 'relative' }}>
         <span className="currency-filter-title">Välj valutor</span>
+        <nav style={{ position: 'absolute', right: 20, top: 20 }}>
+          <Link to="/" style={{ marginRight: '12px' }}>Home</Link>
+          <Link to="/filter">Filter Page</Link>
+        </nav>
       </div>
       <div className="currency-filter-content">
         <input

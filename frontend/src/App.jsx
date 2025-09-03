@@ -1,15 +1,19 @@
-import { useState } from 'react'
-import './App.css'
-import CurrencyFilterPage from './pages/CurrencyFilterPage.jsx'
-import Mainpage from './pages/Mainpage.jsx'
+
+import './App.css';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Mainpage from './pages/Mainpage.jsx';
+import CurrencyFilterPage from './pages/CurrencyFilterPage.jsx';
 
 function App() {
   return (
-    <>
-     <Mainpage />
-      <CurrencyFilterPage />
-    </>
-  )
+    <BrowserRouter>
+  {/* Navigationen hanteras nu i headern på respektive sida */}
+      <Routes>
+        <Route path="/" element={<Mainpage />} />
+        <Route path="/filter" element={<CurrencyFilterPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
