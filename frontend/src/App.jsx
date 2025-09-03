@@ -1,18 +1,21 @@
 
+
 import './App.css';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Mainpage from './pages/Mainpage.jsx';
 import CurrencyFilterPage from './pages/CurrencyFilterPage.jsx';
+import { CurrencyProvider } from './context/CurrencyContext';
 
 function App() {
   return (
-    <BrowserRouter>
-  {/* Navigationen hanteras nu i headern på respektive sida */}
-      <Routes>
-        <Route path="/" element={<Mainpage />} />
-        <Route path="/filter" element={<CurrencyFilterPage />} />
-      </Routes>
-    </BrowserRouter>
+    <CurrencyProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Mainpage />} />
+          <Route path="/filter" element={<CurrencyFilterPage />} />
+        </Routes>
+      </BrowserRouter>
+    </CurrencyProvider>
   );
 }
 
