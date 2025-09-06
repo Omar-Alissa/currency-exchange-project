@@ -12,14 +12,14 @@ function Mainpage() {
     <>
       <header className="app-header">
         <div className="app-header__title">valuta converterare</div>
-        <nav style={{ position: 'absolute', right: 20, top: 20 }}>
-          <Link to="/filter" style={{ marginRight: '12px' }}>Filter Page</Link>
+        <nav className="app-header__nav">
+          <Link to="/filter">Filter Page</Link>
           <Link to="/">Home</Link>
         </nav>
       </header>
-      <div style={{ padding: '24px' }}>
+      <div className="currency-container">
         {selectedCurrencies.length === 0 ? (
-          <div>Inga valutor valda än. Gå till Filter Page för att välja.</div>
+          <div className="empty-state">Inga valutor valda än. Gå till Filter Page för att välja.</div>
         ) : (
           selectedCurrencies.map(currency => (
             <div key={currency.code} className="currency-bar">
