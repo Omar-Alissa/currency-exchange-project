@@ -1,0 +1,51 @@
+.currency-list-item {
+  padding: 16px 0;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.currency-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.currency-code {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.currency-name {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+/* Responsiva breakpoints */
+@media (max-width: 768px) {
+  .currency-list-item {
+    padding: 14px 0;
+  }
+
+  .currency-code {
+    font-size: 1.1rem;
+  }
+
+  .currency-name {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .currency-list-item {
+    padding: 12px 0;
+  }
+
+  .currency-code {
+    font-size: 1rem;
+  }
+
+  .currency-name {
+    font-size: 0.85rem;
+  }
+}

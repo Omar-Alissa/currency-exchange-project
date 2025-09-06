@@ -1,0 +1,31 @@
+[33mcommit ff7371c41f88e3559785bc4ac8ff5c234ecfe42c[m[33m ([m[1;36mHEAD -> [m[1;32mfilterpage[m[33m)[m
+Author: Omar-Alissa <omarissa179@gmail.com>
+Date:   Mon Aug 25 18:24:07 2025 +0200
+
+    jag har skapat filter page med stylling
+
+[33mcommit 6e4e737c543ed405fad44cac9b9cea863b4335ee[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Omar-Alissa <omarissa179@gmail.com>
+Date:   Mon Aug 25 16:47:45 2025 +0200
+
+    Fix line endings
+
+[33mcommit 799e184b23e58dc0a67d23866fcc5fad37ff829c[m
+Author: joshuamedia10-pixel <joshuamedia10@gmail.com>
+Date:   Mon Aug 25 16:10:48 2025 +0200
+
+    Update App.jsx
+    
+     tagit bort vite import och react logo
+
+[33mcommit cab89e5a157da6571f7626dfc4ce00469aa826ba[m
+Author: Omar-Alissa <omarissa179@gmail.com>
+Date:   Mon Aug 25 15:43:16 2025 +0200
+
+    Remove node_modules and add .gitignore
+
+[33mcommit c6b32b7092f0f18e02c28b093429fd91998b0b22[m
+Author: Omar-Alissa <omarissa179@gmail.com>
+Date:   Mon Aug 25 15:39:45 2025 +0200
+
+    Initial commit - Currency Exchange Project setup
