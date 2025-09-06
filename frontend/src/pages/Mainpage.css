@@ -270,3 +270,604 @@
     }
   }
   
+/* Nya stilar för redigeringsfunktionalitet */
+.currency-bar__actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.currency-bar__edit-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.currency-bar__edit-btn:hover {
+  background-color: #2563eb;
+}
+
+.currency-bar__remove-btn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.currency-bar__remove-btn:hover {
+  background-color: #dc2626;
+}
+
+.currency-bar__edit-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.currency-bar__edit-input {
+  background-color: #1a1a1a;
+  color: white;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  width: 120px;
+  text-align: right;
+}
+
+.currency-bar__edit-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.currency-bar__edit-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.currency-bar__save-btn {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.currency-bar__save-btn:hover {
+  background-color: #059669;
+}
+
+.currency-bar__cancel-btn {
+  background-color: #6b7280;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.currency-bar__cancel-btn:hover {
+  background-color: #4b5563;
+}
+
+/* Responsiva stilar för redigeringsfunktioner */
+@media (max-width: 768px) {
+  .currency-bar__actions {
+    gap: 6px;
+  }
+
+  .currency-bar__edit-btn,
+  .currency-bar__remove-btn {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+
+  .currency-bar__edit-input {
+    width: 100px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .currency-bar__actions {
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .currency-bar__edit-btn,
+  .currency-bar__remove-btn {
+    padding: 4px 6px;
+    font-size: 0.75rem;
+  }
+
+  .currency-bar__edit-group {
+    align-items: center;
+  }
+
+  .currency-bar__edit-input {
+    width: 80px;
+    font-size: 0.8rem;
+  }
+
+  .currency-bar__edit-buttons {
+    gap: 4px;
+  }
+
+  .currency-bar__save-btn,
+  .currency-bar__cancel-btn {
+    padding: 3px 6px;
+    font-size: 0.7rem;
+  }
+}
+
+/* Stilar för basbelopp-sektionen */
+.base-amount-section {
+  background-color: #1a1a1a;
+  border: 2px solid #3b82f6;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.base-amount-label {
+  display: block;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.base-amount-input {
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #3b82f6;
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  width: 200px;
+  max-width: 100%;
+}
+
+.base-amount-input:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Responsiva stilar för basbelopp */
+@media (max-width: 768px) {
+  .base-amount-section {
+    padding: 12px;
+    margin-bottom: 16px;
+  }
+
+  .base-amount-label {
+    font-size: 1rem;
+  }
+
+  .base-amount-input {
+    font-size: 1.1rem;
+    padding: 10px 12px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .base-amount-section {
+    padding: 10px;
+    margin-bottom: 12px;
+  }
+
+  .base-amount-label {
+    font-size: 0.9rem;
+  }
+
+  .base-amount-input {
+    font-size: 1rem;
+    padding: 8px 10px;
+    width: 120px;
+  }
+}
+
+/* Stilar för basvaluta */
+.base-currency {
+  border-color: #10b981 !important;
+  background-color: rgba(16, 185, 129, 0.1) !important;
+}
+
+.base-indicator {
+  color: #10b981;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-left: 4px;
+}
+
+.base-currency-info {
+  color: #a3a3a3;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* Responsiva stilar för basvaluta-info */
+@media (max-width: 768px) {
+  .base-currency-info {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .base-currency-info {
+    font-size: 0.75rem;
+  }
+  
+  .base-indicator {
+    font-size: 0.7rem;
+  }
+}
+
+/* Stilar för Välj-knappen */
+.currency-bar__select-btn {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: 600;
+}
+
+.currency-bar__select-btn:hover {
+  background-color: #059669;
+}
+
+.currency-bar__select-btn:active {
+  background-color: #047857;
+}
+
+/* Responsiva stilar för Välj-knappen */
+@media (max-width: 768px) {
+  .currency-bar__select-btn {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .currency-bar__select-btn {
+    padding: 4px 6px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Stilar för Välj-knappen */
+.currency-bar__select-btn {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: 600;
+}
+
+.currency-bar__select-btn:hover {
+  background-color: #059669;
+}
+
+.currency-bar__select-btn:active {
+  background-color: #047857;
+}
+
+/* Stil för aktiv Välj-knapp */
+.currency-bar__select-btn.selected {
+  background-color: #3b82f6;
+  cursor: default;
+}
+
+.currency-bar__select-btn.selected:hover {
+  background-color: #3b82f6;
+}
+
+/* Responsiva stilar för Välj-knappen */
+@media (max-width: 768px) {
+  .currency-bar__select-btn {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .currency-bar__select-btn {
+    padding: 4px 6px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Stilar för nollvärden */
+.currency-bar__value.zero-value {
+  color: #6b7280;
+  font-style: italic;
+}
+
+.base-amount-input::placeholder {
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Förbättrad basvaluta-info */
+.base-currency-info {
+  color: #a3a3a3;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Responsiva stilar för nollvärden */
+@media (max-width: 768px) {
+  .base-currency-info {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .base-currency-info {
+    font-size: 0.75rem;
+  }
+}
+
+/* Klickbara värden */
+.clickable-value {
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 4px 8px;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.clickable-value:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #60a5fa;
+}
+
+.clickable-value:active {
+  background-color: rgba(59, 130, 246, 0.2);
+  transform: scale(0.98);
+}
+
+/* Basbelopp input med tangentbordsikon */
+.base-amount-input {
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #3b82f6;
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  width: 200px;
+  max-width: 100%;
+  cursor: pointer;
+  position: relative;
+}
+
+.base-amount-input:focus {
+  outline: none;
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.base-amount-input::after {
+  content: "⌨️";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+}
+
+/* Redigeringsinput med tangentbordsikon */
+.currency-bar__edit-input {
+  background-color: #1a1a1a;
+  color: white;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  width: 120px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.currency-bar__edit-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+/* Responsiva stilar för klickbara värden */
+@media (max-width: 768px) {
+  .clickable-value {
+    padding: 3px 6px;
+  }
+  
+  .base-amount-input {
+    font-size: 1.1rem;
+    padding: 10px 12px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clickable-value {
+    padding: 2px 4px;
+  }
+  
+  .base-amount-input {
+    font-size: 1rem;
+    padding: 8px 10px;
+    width: 120px;
+  }
+  
+  .currency-bar__edit-input {
+    width: 100px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobil-specifika stilar */
+@media (max-width: 768px) {
+  /* På mobil: visa tangentbordet automatiskt */
+  .base-amount-input,
+  .currency-bar__edit-input {
+    cursor: pointer;
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #3b82f6;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    width: 200px;
+    max-width: 100%;
+    position: relative;
+  }
+  
+  .base-amount-input:focus,
+  .currency-bar__edit-input:focus {
+    outline: none;
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  
+  /* Visa tangentbordsikon på mobil */
+  .base-amount-input::after,
+  .currency-bar__edit-input::after {
+    content: "⌨️";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+  }
+  
+  /* Klickbara värden på mobil */
+  .clickable-value {
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 4px 8px;
+    border-radius: 4px;
+    user-select: none;
+    background-color: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+  
+  .clickable-value:hover {
+    background-color: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+  }
+  
+  .clickable-value:active {
+    background-color: rgba(59, 130, 246, 0.3);
+    transform: scale(0.98);
+  }
+}
+
+/* Desktop-specifika stilar */
+@media (min-width: 769px) {
+  /* På desktop: dölj tangentbordet som standard */
+  .base-amount-input,
+  .currency-bar__edit-input {
+    cursor: text;
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    width: 200px;
+    max-width: 100%;
+  }
+  
+  .base-amount-input:focus,
+  .currency-bar__edit-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  
+  /* Klickbara värden på desktop */
+  .clickable-value {
+    cursor: pointer;
+    transition: all 0.2s;
+    padding: 4px 8px;
+    border-radius: 4px;
+    user-select: none;
+  }
+  
+  .clickable-value:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #60a5fa;
+  }
+  
+  .clickable-value:active {
+    background-color: rgba(59, 130, 246, 0.2);
+    transform: scale(0.98);
+  }
+}
+
+/* Responsiva stilar för klickbara värden */
+@media (max-width: 768px) {
+  .clickable-value {
+    padding: 3px 6px;
+  }
+  
+  .base-amount-input {
+    font-size: 1.1rem;
+    padding: 10px 12px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clickable-value {
+    padding: 2px 4px;
+  }
+  
+  .base-amount-input {
+    font-size: 1rem;
+    padding: 8px 10px;
+    width: 120px;
+  }
+  
+  .currency-bar__edit-input {
+    width: 100px;
+    font-size: 0.9rem;
+  }
+}

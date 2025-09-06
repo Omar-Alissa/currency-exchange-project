@@ -1,0 +1,240 @@
+/* Tangentbord overlay */
+.keyboard-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.keyboard-container {
+  background-color: #1a1a1a;
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.keyboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #333;
+}
+
+.keyboard-clear-btn,
+.keyboard-close-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.keyboard-clear-btn:hover,
+.keyboard-close-btn:hover {
+  background-color: #2563eb;
+}
+
+.keyboard-close-btn {
+  background-color: #ef4444;
+}
+
+.keyboard-close-btn:hover {
+  background-color: #dc2626;
+}
+
+.keyboard-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.keyboard-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.keyboard-key {
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 12px;
+  font-size: 24px;
+  font-weight: 600;
+  width: 80px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.keyboard-key:hover {
+  background-color: #3a3a3a;
+  transform: scale(1.05);
+}
+
+.keyboard-key:active {
+  transform: scale(0.95);
+  background-color: #4a4a4a;
+}
+
+.delete-key {
+  background-color: #ef4444;
+  border-color: #dc2626;
+}
+
+.delete-key:hover {
+  background-color: #dc2626;
+}
+
+/* Mobil-specifika stilar */
+.mobile-keyboard {
+  /* På mobil: alltid visa tangentbordet när det är aktivt */
+  display: flex;
+}
+
+.mobile-keyboard .keyboard-container {
+  /* Mobil: större padding och knappar */
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+}
+
+.mobile-keyboard .keyboard-key {
+  /* Mobil: större knappar för fingernavigering */
+  width: 80px;
+  height: 60px;
+  font-size: 24px;
+}
+
+/* Desktop-specifika stilar */
+.desktop-keyboard {
+  /* På desktop: dölj tangentbordet som standard */
+  display: none;
+}
+
+/* Visa tangentbordet på desktop endast vid hover eller explicit aktivering */
+@media (min-width: 769px) {
+  .desktop-keyboard {
+    display: none !important;
+  }
+  
+  /* Alternativ: visa tangentbordet på desktop vid explicit aktivering */
+  .desktop-keyboard.force-show {
+    display: flex !important;
+  }
+}
+
+/* Responsiva stilar för mobil */
+@media (max-width: 768px) {
+  .mobile-keyboard {
+    display: flex;
+  }
+  
+  .keyboard-container {
+    padding: 15px;
+  }
+  
+  .keyboard-key {
+    width: 70px;
+    height: 50px;
+    font-size: 20px;
+  }
+  
+  .keyboard-row {
+    gap: 10px;
+  }
+  
+  .keyboard-grid {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-keyboard {
+    display: flex;
+  }
+  
+  .keyboard-container {
+    padding: 12px;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .keyboard-key {
+    width: 60px;
+    height: 45px;
+    font-size: 18px;
+  }
+  
+  .keyboard-row {
+    gap: 8px;
+  }
+  
+  .keyboard-grid {
+    gap: 8px;
+  }
+  
+  .keyboard-header {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+  }
+  
+  .keyboard-clear-btn,
+  .keyboard-close-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Extra små skärmar */
+@media (max-width: 360px) {
+  .mobile-keyboard .keyboard-key {
+    width: 50px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  .mobile-keyboard .keyboard-row {
+    gap: 6px;
+  }
+  
+  .mobile-keyboard .keyboard-grid {
+    gap: 6px;
+  }
+}

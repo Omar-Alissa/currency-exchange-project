@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useContext } from 'react';
 import CurrencyListItem from '../componenter/CurrencyListItem';
 import { fetchRates } from '../api/exchangeApi';
@@ -11,22 +10,27 @@ function CurrencyFilterPage() {
   const [error, setError] = useState('');
   const [search, setSearch] = useState('');
   const [selected, setSelected] = useState(null);
-  const { selectedCurrencies, setSelectedCurrencies } = useContext(CurrencyContext);
+  const { addCurrency } = useContext(CurrencyContext);
   const navigate = useNavigate();
 
   useEffect(() => {
     fetchRates('EUR')
       .then(data => {
-        if (data && data.quotes) {
-          const arr = Object.entries(data.quotes).map(([code, value]) => ({
-            code: code.replace('EUR', ''),
-            name: code, // Du kan mappa namn om du vill
-            value
+        if (data && data.rates) {
+          const arr = Object.entries(data.rates).map(([code, value]) => ({
+            code: code,
+            name: code,
+            value: value // Detta är växelkursen från EUR
           }));
           setCurrencies(arr);
+        } else {
+          setError('Kunde inte hämta valutadata');
         }
       })
-      .catch(err => setError('Kunde inte hämta data'));
+      .catch(err => {
+        console.error('API Error:', err);
+        setError('Kunde inte hämta data');
+      });
   }, []);
 
   const filtered = currencies.filter(currency =>
@@ -58,16 +62,13 @@ function CurrencyFilterPage() {
               <h3>Vald valuta:</h3>
               <div>Kod: {selected.code}</div>
               <div>Namn: {selected.name}</div>
-              <div>Värde: {selected.value}</div>
+              <div>Växelkurs: {selected.value}</div>
               <button onClick={() => setSelected(null)} style={{ marginTop: '12px' }}>Tillbaka</button>
             </div>
           ) : (
             filtered.map(currency => (
               <div key={currency.code} onClick={() => {
-                // Lägg bara till om valutan inte redan finns
-                if (!selectedCurrencies.some(c => c.code === currency.code)) {
-                  setSelectedCurrencies([...selectedCurrencies, currency]);
-                }
+                addCurrency(currency);
                 navigate('/');
               }} style={{ cursor: 'pointer' }}>
                 <CurrencyListItem code={currency.code} name={currency.name} />
