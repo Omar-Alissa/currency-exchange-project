@@ -36,10 +36,10 @@ function CurrencyFilterPage() {
 
   return (
     <div className="currency-filter-container">
-      <div className="currency-filter-header" style={{ position: 'relative' }}>
+      <div className="currency-filter-header">
         <span className="currency-filter-title">Välj valutor</span>
-        <nav style={{ position: 'absolute', right: 20, top: 20 }}>
-          <Link to="/" style={{ marginRight: '12px' }}>Home</Link>
+        <nav className="currency-filter-nav">
+          <Link to="/">Home</Link>
           <Link to="/filter">Filter Page</Link>
         </nav>
       </div>
